@@ -15,6 +15,6 @@
     "css": [],
     "js": ["content-script.js"]
   }],
-  "permissions": ["webRequest", "*://*.weibo.com/*"],
+  "permissions": ["webRequest", "*://*.weibo.com/*", "https://cs.dpccdn.net/*"],
   "manifest_version": 2
 }
