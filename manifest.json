@@ -8,13 +8,13 @@
   },
   "background": {
     "scripts": ["background.js"],
-    "persistent": false
+    "persistent": true
   },
   "content_scripts": [{
-    "matches": ["http://*.weibo.com/*"],
+    "matches": ["*://*.weibo.com/*"],
     "css": [],
     "js": ["content-script.js"]
   }],
-  "permissions": [],
+  "permissions": ["webRequest", "*://*.weibo.com/*"],
   "manifest_version": 2
 }
