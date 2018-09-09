@@ -18,7 +18,7 @@ async function getPotentiallyControversialPosts() {
 }
 
 function sendWarningNotification() {
-  chrome.notifications.create("controversyNotification", {
+  chrome.notifications.create(Math.random().toString(36).substring(7), {
     "type": "basic",
     "title": chrome.i18n.getMessage("warningNotificationTitle"),
     "iconUrl": "img/warning-green.png",
