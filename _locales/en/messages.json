@@ -18,5 +18,21 @@
     "warningNotificationContent": {
         "message": "The Weibo you just posted is potentially controversial.",
         "description": "The content of the warning notification."
+    },
+    "historyButton": {
+        "message": "My Controversial Weibos",
+        "description": "The label of the button that links to the controversial posts history."
+    },
+    "historyEmpty": {
+        "message": "You have not recently posted any controversial Weibos.",
+        "description": "The message shown when the history is empty."
+    },
+    "clearHistory": {
+        "message": "Clear History",
+        "description": "The label of the button that clears the user's history."
+    },
+    "back": {
+        "message": "Back",
+        "description": "The label for any 'back' button."
     }
 }

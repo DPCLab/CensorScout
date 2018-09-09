@@ -1,17 +1,17 @@
 function storeNewPotentiallyControversialPost(postText) {
-  chrome.storage.local.get({
+  chrome.storage.sync.get({
     postedTexts: []
   }, function (result) {
     postedTexts = result.postedTexts;
     postedTexts.push(postText);
-    chrome.storage.local.set({
+    chrome.storage.sync.set({
       postedTexts: postedTexts
     });
   })
 }
 
 async function getPotentiallyControversialPosts() {
-  let dataResponse = await chrome.storage.local.get({
+  let dataResponse = await chrome.storage.sync.get({
     postedTexts: []
   });
   return dataResponse.postedTexts;
