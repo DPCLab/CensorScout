@@ -1,0 +1,22 @@
+{
+    "name": {
+        "message": "CensorScout",
+        "description": "The name of the extension."
+    },
+    "description": {
+        "message": "CensorScout notifies you when something you post on Weibo might be controversial or taken down. Keep your online identity clean using CensorScout.",
+        "description": "The description of the extension."
+    },
+    "shortDescription": {
+        "message": "Get a notification whenever you post a Weibo that might be censored.",
+        "description": "The short description of the extension."
+    },
+    "warningNotificationTitle": {
+        "message": "Controversial Weibo",
+        "description": "The title of the warning notification."
+    },
+    "warningNotificationContent": {
+        "message": "The Weibo you just posted is potentially controversial.",
+        "description": "The content of the warning notification."
+    }
+}

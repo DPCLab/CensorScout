@@ -1,20 +1,22 @@
 {
-  "name": "CensorWatch",
-  "description" : "Get alerts when your Weibos are being censored. ",
+  "name": "__MSG_name__",
+  "description" : "__MSG_shortDescription__",
   "version": "1.0",
   "browser_action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_popup": "src/popup/index.html"
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["src/background.js"],
     "persistent": true
   },
-  "content_scripts": [{
-    "matches": ["*://*.weibo.com/*"],
-    "css": [],
-    "js": ["content-script.js"]
-  }],
-  "permissions": ["webRequest", "*://*.weibo.com/*", "https://cs.dpccdn.net/*"],
-  "manifest_version": 2
+  "icons": {
+    "42": "img/42.png",
+    "72": "img/72.png",
+    "96": "img/96.png",
+    "144": "img/144.png",
+    "192": "img/192.png"
+  },
+  "permissions": ["webRequest", "*://*.weibo.com/*", "https://cs.dpccdn.net/*", "storage", "notifications"],
+  "manifest_version": 2,
+  "default_locale": "en"
 }
