@@ -28,24 +28,25 @@ function sendWarningNotification() {
 
 function interceptRequest(requestDetails) {
   if (requestDetails.method == "POST" && requestDetails.url.indexOf("https://www.weibo.com/aj/mblog/add") != -1) {
+    // TODO: check if the above url is the _only_ post URL
     var postText = requestDetails.requestBody.formData.text[0];
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://s.weibo.com/weibo/" + postText, false);
-    xhr.send();
-
-    var responseText = xhr.responseText;
-
-    if (responseText.indexOf("\\u6839\\u636e\\u76f8\\u5173\\u6cd5\\u5f8b\\u6cd5\\u89c4\\u548c\\u653f\\u7b56\\uff0c\\u201c") != -1 && responseText.indexOf("\\u201d\\u641c\\u7d22\\u7ed3\\u679c\\u672a\\u4e88\\u663e\\u793a") != -1) {
-      xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://cs.dpccdn.net/v1", true);
-      xhr.setRequestHeader('Content-Type', 'application/json');
-      xhr.send(JSON.stringify({
-        text: postText
-      }));
-      storeNewPotentiallyControversialPost(postText);
-      sendWarningNotification();
+    xhr.open("GET", "http://s.weibo.com/weibo/" + postText, true);
+    xhr.onload = function (e) {
+      var responseText = xhr.responseText;
+      if (responseText.indexOf("\\u6839\\u636e\\u76f8\\u5173\\u6cd5\\u5f8b\\u6cd5\\u89c4\\u548c\\u653f\\u7b56\\uff0c\\u201c") != -1 && responseText.indexOf("\\u201d\\u641c\\u7d22\\u7ed3\\u679c\\u672a\\u4e88\\u663e\\u793a") != -1) {
+        xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://cs.dpccdn.net/v1", true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.send(JSON.stringify({
+          text: postText
+        }));
+        storeNewPotentiallyControversialPost(postText);
+        sendWarningNotification();
+      }
     }
+    xhr.send();
   }
 }
 
