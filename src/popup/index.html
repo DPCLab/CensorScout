@@ -2,55 +2,58 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="css/bulma.min.css">
-  <style>
-    @font-face {
-      font-family: "montserrat";
-      src: url("fonts/Montserrat-Bold.ttf");
-    }
+    <link rel="stylesheet" href="css/bulma.min.css">
+    <style>
+        @font-face {
+            font-family: "montserrat";
+            src: url("fonts/Montserrat-Bold.ttf");
+        }
 
-    body {
-      background-image: linear-gradient(to bottom right, #c31432, #240b36);
-      color: white;
-      padding: 15px;
-      margin: 0;
-    }
+        body {
+            background-image: linear-gradient(to bottom right, #c31432, #240b36);
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
 
-    .content h1 {
-      color: white;
-      margin-bottom: 5px;
-      font-family: "montserrat";
-    }
+        .content h1 {
+            color: white;
+            margin-bottom: 5px;
+            font-family: "Montserrat", sans-serif;
+        }
 
-    ul {
-      list-style-type: square;
-    }
+        ul {
+            list-style-type: square;
+        }
 
-    #history {
-      display: none;
-    }
-  </style>
-  <script src="js/jquery.min.js"></script>
+        #history {
+            display: none;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="content">
-      <div id="info">
-        <h1 id="title"></h1>
-        <p id="description"></p>
-        <hr>
-        <button class="button is-outlined is-white" id="historyButton"></button>
-      </div>
-      <div id="history">
-        <button class="button is-outlined is-white is-small backButton" id="infoButton"></button>
-        <button class="button is-outlined is-white is-small is-pulled-right" id="clearHistoryButton"></button>
-        <br><br>
-        <div id="history-list"></div>
-      </div>
+    <div class="container">
+        <div class="content">
+            <div id="info">
+                <h1 id="title"></h1>
+                <p id="description"></p>
+                <button class="button is-outlined is-white is-fullwidth" id="historyButton"></button>
+                <div id="updateButtonContainer">
+                    <br>
+                    <a class="button is-warning is-fullwidth" id="updateButton"></a>
+                </div>
+            </div>
+            <div id="history">
+                <button class="button is-outlined is-white is-small backButton" id="infoButton"></button>
+                <button class="button is-outlined is-white is-small is-pulled-right" id="clearHistoryButton"></button>
+                <br><br>
+                <div id="history-list"></div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,10 @@ $("#description").text(chrome.i18n.getMessage("description"));
 $("#historyButton").text(chrome.i18n.getMessage("historyButton"));
 $("#clearHistoryButton").text(chrome.i18n.getMessage("clearHistory"));
 $(".backButton").text(chrome.i18n.getMessage("back"));
+$("#updateButton").text(chrome.i18n.getMessage("updateButton"));
 
+// pulling values
+const EXTENSION_VERSION = parseInt(chrome.runtime.getManifest().version);
 
 // setting button listeners
 
@@ -44,9 +47,34 @@ function loadHistory() {
     })
 }
 
+function updateButtonRefresh() {
+    chrome.storage.local.get({
+        latestVersion: EXTENSION_VERSION,
+        updateUrl: null
+    }, (data) => {
+        if (EXTENSION_VERSION < data.latestVersion) {
+            $('#updateButton').on('click', function () {
+                chrome.tabs.create({
+                    url: data.updateUrl
+                });
+                return false;
+            });
+            $("#updateButtonContainer").show();
+        } else {
+            $("#updateButtonContainer").hide();
+        }
+    })
+}
+
+
+// setup
+
+$("#updateButtonContainer").hide();
 loadHistory();
+updateButtonRefresh();
 chrome.storage.onChanged.addListener(function (changes, namespace) {
     loadHistory();
+    updateButtonRefresh();
 });
 
 
