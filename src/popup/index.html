@@ -4,13 +4,20 @@
 <head>
     <link rel="stylesheet" href="css/bulma.min.css">
     <style>
+      @font-face {
+        font-family: "montserrat";
+        src: url("fonts/Montserrat-Bold.ttf");
+      }
         body {
-            background-image: linear-gradient(to bottom right, #8E2DE2, #4A00E0);
+            background-image: linear-gradient(to bottom right, #c31432, #240b36);
             color: white;
             padding: 15px;
+            margin: 0;
         }
         .content h1 {
             color: white;
+            margin-bottom: 5px;
+            font-family: "montserrat";
         }
         ul {
             list-style-type: square;
@@ -28,6 +35,7 @@
             <div id="info">
                 <h1 id="title"></h1>
                 <p id="description"></p>
+                <hr>
                 <button class="button is-outlined is-white" id="historyButton"></button>
             </div>
             <div id="history">
