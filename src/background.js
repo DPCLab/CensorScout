@@ -37,7 +37,7 @@ function interceptRequest(requestDetails) {
       var responseText = xhr.responseText;
       if (responseText.indexOf("\\u6839\\u636e\\u76f8\\u5173\\u6cd5\\u5f8b\\u6cd5\\u89c4\\u548c\\u653f\\u7b56\\uff0c\\u201c") != -1 && responseText.indexOf("\\u201d\\u641c\\u7d22\\u7ed3\\u679c\\u672a\\u4e88\\u663e\\u793a") != -1) {
         xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://cs.dpccdn.net/v1", true);
+        xhr.open("POST", "https://cs.dpccdn.net/v1/post", true);
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(JSON.stringify({
           text: postText
