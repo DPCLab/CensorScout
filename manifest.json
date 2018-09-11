@@ -18,5 +18,5 @@
   },
   "permissions": ["webRequest", "*://*.weibo.com/*", "https://cs.dpccdn.net/*", "storage", "notifications"],
   "manifest_version": 2,
-  "default_locale": "en"
+  "default_locale": "zh"
 }
