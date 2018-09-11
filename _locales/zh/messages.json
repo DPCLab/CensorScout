@@ -1,10 +1,10 @@
 {
   "name": {
-    "message": "CensorScout",
+    "message": "审查探测",
     "description": "The name of the extension."
   },
   "description": {
-    "message": "CensorScout notifies you when something you post on Weibo might be controversial or taken down. Keep your online identity clean using CensorScout.",
+    "message": "审查探测 notifies you when something you post on Weibo might be controversial or taken down. Keep your online identity clean using 审查探测.",
     "description": "The description of the extension."
   },
   "shortDescription": {
@@ -40,7 +40,7 @@
     "description": "The title of the notification that notifies the user that an update is available."
   },
   "updateNotificationContent": {
-    "message": "An update is available for CensorScout. Click here to download.",
+    "message": "An update is available for 审查探测. Click here to download.",
     "description": "Content of the update notification."
   },
   "updateButton": {
