@@ -4,47 +4,47 @@
     "description": "The name of the extension."
   },
   "description": {
-    "message": "审查探测 notifies you when something you post on Weibo might be controversial or taken down. Keep your online identity clean using 审查探测.",
+    "message": "审查探测会在您已发送的微博中有可能含有敏感内容，或者您的微博被屏蔽时警告您。使用审查探测，确保您的在线身份不留黑历史。",
     "description": "The description of the extension."
   },
   "shortDescription": {
-    "message": "Get a notification whenever you post a Weibo that might be censored.",
+    "message": "在发送微博中可能含有敏感内容时警告用户。",
     "description": "The short description of the extension."
   },
   "warningNotificationTitle": {
-    "message": "Controversial Weibo",
+    "message": "敏感微博。",
     "description": "The title of the warning notification."
   },
   "warningNotificationContent": {
-    "message": "The Weibo you just posted is potentially controversial.",
+    "message": "您刚发送的微博可能含有敏感内容。",
     "description": "The content of the warning notification."
   },
   "historyButton": {
-    "message": "My Controversial Weibos",
+    "message": "我的敏感微博",
     "description": "The label of the button that links to the controversial posts history."
   },
   "historyEmpty": {
-    "message": "You have not recently posted any controversial Weibos.",
+    "message": "您最近没有发布过任何敏感微博。",
     "description": "The message shown when the history is empty."
   },
   "clearHistory": {
-    "message": "Clear History",
+    "message": "清除历史",
     "description": "The label of the button that clears the user's history."
   },
   "back": {
-    "message": "Back",
+    "message": "返回",
     "description": "The label for any 'back' button."
   },
   "updateNotificationTitle": {
-    "message": "Update Available",
+    "message": "审查测探有可用更新",
     "description": "The title of the notification that notifies the user that an update is available."
   },
   "updateNotificationContent": {
-    "message": "An update is available for 审查探测. Click here to download.",
+    "message": "审查探测有可用更新。点击此处开始下载。",
     "description": "Content of the update notification."
   },
   "updateButton": {
-    "message": "Update Available",
+    "message": "有可用更新。",
     "description": "Content of the update notification in the popup."
   }
 }
